@@ -25,14 +25,9 @@ for (var i = 0; i < d.length; i++) {
     c = m.charCodeAt(0)
     if (c > 96) {
       t += c-96
-      console.log(m+" "+(c-96))
-
     } else {
       t += c-38
-      console.log(m+" "+(c-38))
-
     }
-
   }
 }
 
