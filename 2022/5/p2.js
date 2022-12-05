@@ -26,8 +26,8 @@ for (var i = 0; i < o.length-1; i++) {
   num = Number(o[i][1])
   start = Number(o[i][3])
   end = Number(o[i][5])
-  crate = stacks[start-1].splice(0, num)
-  stacks[end-1].splice(0, 0, ...crate)
+  crates = stacks[start-1].splice(0, num)
+  stacks[end-1].splice(0, 0, ...crates)
 }
 
 endingCrates = "";
