@@ -6,7 +6,7 @@ d = d.split("\r\n")
 directories = {}
 currentPath = []
 
-t = 0;
+totalSizeOfSmallDirs = 0;
 usedSpace = 0
 
 for (var i = 0; i < d.length-1; i++) {
@@ -46,9 +46,9 @@ for (var i = 0; i < Object.values(directories).length; i++) {
     bestDirSpace = size
   }
   if (size < 100000) {
-    t += size
+    totalSizeOfSmallDirs += size
   }
 }
 
-console.log("part 1: "+t)
+console.log("part 1: "+totalSizeOfSmallDirs)
 console.log("part 2: "+bestDirSpace)
