@@ -22,16 +22,13 @@ for (var i = 0; i < d.length-1; i++) {
       }
     }
   } else if (d[i][0] != "dir") {
-    path = (currentPath.join("/")+"/"+d[i][1]).split("/")
     size = Number(d[i][0])
     usedSpace += size
-    if (path[0] != "") {
-      for (var j = 0; j < path.length-1; j++) {
-        if (directories[path.slice(0,j+1)] == undefined) {
-          directories[path.slice(0,j+1)] = size
-        } else {
-          directories[path.slice(0,j+1)] += size
-        }
+    for (var j = 0; j < currentPath.length; j++) {
+      if (directories[currentPath.slice(0,j+1)] == undefined) {
+        directories[currentPath.slice(0,j+1)] = size
+      } else {
+        directories[currentPath.slice(0,j+1)] += size
       }
     }
   }
