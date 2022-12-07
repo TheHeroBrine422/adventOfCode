@@ -11,7 +11,7 @@ usedSpace = 0
 
 for (var i = 0; i < d.length-1; i++) {
   d[i] = d[i].split(" ")
-  if (d[i][0] == "$") {
+  if (d[i][0] == "$") { // if cd command change the currentPath accordingly
     if (d[i][1] == "cd") {
       if (d[i][2] == "/") {
         currentPath = []
@@ -21,7 +21,7 @@ for (var i = 0; i < d.length-1; i++) {
         currentPath.push(d[i][2])
       }
     }
-  } else if (d[i][0] != "dir") {
+  } else if (d[i][0] != "dir") { // if its a file, add the file to the overall size, and add the size to all the directories the file is apart of
     size = Number(d[i][0])
     usedSpace += size
     for (var j = 0; j < currentPath.length; j++) {
