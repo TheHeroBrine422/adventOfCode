@@ -3,7 +3,6 @@ const fs = require('fs')
 d = fs.readFileSync('data.txt', 'utf8')
 d = d.split("\r\n")
 
-files = {}
 directories = {}
 currentPath = []
 
