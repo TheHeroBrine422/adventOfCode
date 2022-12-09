@@ -10,4 +10,3 @@ for (var i = 0; i < d.length-1; i++) {
 }
 
 console.log(t)
-console.log(t)
