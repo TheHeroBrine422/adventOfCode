@@ -18,9 +18,6 @@ for (var i = 0; i < d.length-1; i++) {
     cycles++
     X += Number(d[i][1])
   }
-  if (cycles % 40 == 20) {
-    totalSignalStrengths += cycles * X
-  }
   renderPixelAndCalcStrength()
 }
 
