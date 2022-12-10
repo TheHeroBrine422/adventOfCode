@@ -6,7 +6,7 @@ d = d.split("\r\n")
 cycles = 1
 X = 1
 totalSignalStrengths = 0;
-display = ""
+display = "#"
 
 for (var i = 0; i < d.length-1; i++) {
   d[i] = d[i].split(" ")
@@ -32,7 +32,7 @@ function renderPixelAndCalcStrength() {
   if (X == crtPosition || X-1 == crtPosition || X+1 == crtPosition) {
     display += "#"
   } else {
-    display += "."
+    display += " "
   }
   if ((cycles) % 40 == 0 && cycles != 0) {
     display += "\n"
