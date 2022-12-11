@@ -5,6 +5,7 @@ d = d.split("\r\n\r\n")
 
 monkeys = []
 primedDivisbilityModulo = BigInt(1)
+part = 1
 
 for (var i = 0; i < d.length; i++) {
   d[i] = d[i].split("\r\n")
@@ -21,7 +22,7 @@ for (var i = 0; i < d.length; i++) {
   monkeys.push(monkeyObj)
 }
 
-for (var i = 0; i < 10000 ; i++) {
+for (var i = 0; i < part == 1 ? 20 : 10000; i++) {
   for (var j = 0; j < monkeys.length; j++) {
     snapShotLength = monkeys[j].items.length
     for (var k = 0; k < snapShotLength; k++) {
@@ -33,7 +34,11 @@ for (var i = 0; i < 10000 ; i++) {
         monkeys[j].items[0] = (monkeys[j].items[0]*monkeys[j].items[0])
       }
 
-      monkeys[j].items[0] = monkeys[j].items[0] % primedDivisbilityModulo
+      if (part == 1) {
+        monkeys[j].items[0] = monkeys[j].items[0]/BigInt(3)
+      } else {
+        monkeys[j].items[0] = monkeys[j].items[0] % primedDivisbilityModulo
+      }
 
       if (monkeys[j].items[0] % monkeys[j].test == 0) {
         monkeys[monkeys[j].trueMonkey].items.push(monkeys[j].items[0])
