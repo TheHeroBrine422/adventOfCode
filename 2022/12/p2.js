@@ -82,7 +82,6 @@ function init(startX, startY) {
     grid[i] = new Array(rows);
   }
 
-  startingPos = []
   endingPos = []
 
   for (let i = 0; i < cols; i++) {
@@ -90,7 +89,6 @@ function init(startX, startY) {
       height = 0;
       if (d[i][j] == "S") {
         height = 1
-        startingPos = [i,j]
       } else if (d[i][j] == "E") {
         height = 26
         endingPos = [i,j]
