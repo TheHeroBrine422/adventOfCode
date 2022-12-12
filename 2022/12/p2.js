@@ -19,9 +19,6 @@ let grid = new Array(cols); //array of all the grid points
 let openSet = []; //array containing unevaluated grid points
 let closedSet = []; //array containing completely evaluated grid points
 
-let openSet = []; //array containing unevaluated grid points
-let closedSet = []; //array containing completely evaluated grid points
-
 let start; //starting grid point
 let end; // ending grid point (goal)
 let path = [];
@@ -139,7 +136,6 @@ function search(startX, startY) {
         path.push(temp.parent);
         temp = temp.parent;
       }
-      console.log("DONE!");
       // return the traced path
       return path.reverse();
     }

@@ -107,7 +107,7 @@ function init() {
 
   openSet.push(start);
 
-  console.log(grid);
+  //console.log(grid);
 }
 
 //A star search implementation
@@ -131,7 +131,6 @@ function search() {
         path.push(temp.parent);
         temp = temp.parent;
       }
-      console.log("DONE!");
       // return the traced path
       return path.reverse();
     }
