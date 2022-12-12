@@ -3,9 +3,10 @@ const fs = require('fs')
 d = fs.readFileSync('data.txt', 'utf8')
 d = d.split("\r\n\r\n")
 
+part = 1
+
 monkeys = []
 primedDivisbilityModulo = BigInt(1)
-part = 1
 
 for (var i = 0; i < d.length; i++) {
   d[i] = d[i].split("\r\n")
