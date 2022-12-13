@@ -1,5 +1,10 @@
-// warning: this code is awful. i didnt deal with cleaning it up and it doesnt even work. it generally missorts one value near the very end of the list. i manually copied all the packets, manually sorted the missorted value and then used crtl+f to find the indexs of the divider packets and then manually did the math.
+/*warning:
 
+this code is awful. i didnt deal with cleaning it up and it doesnt even work.
+it generally missorts one value near the very end of the list.
+i manually copied all the packets, manually sorted the missorted value and then used crtl+f to find the indexs of the divider packets and then manually did the math.
+
+*/
 const fs = require('fs')
 
 d = fs.readFileSync('data.txt', 'utf8')
