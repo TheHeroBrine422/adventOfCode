@@ -1,8 +1,7 @@
-/*warning:
+/* info:
 
-this code is awful. i didnt deal with cleaning it up and it doesnt even work.
-it generally missorts one value near the very end of the list.
-i manually copied all the packets, manually sorted the missorted value and then used crtl+f to find the indexs of the divider packets and then manually did the math.
+after finishing p2 i finally realized how to use js's sort function.
+I then wrote a working version that is almost 100 lines shorter in 7 minutes.
 
 */
 const fs = require('fs')
