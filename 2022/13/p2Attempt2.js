@@ -24,8 +24,6 @@ for (var i = 0; i < d.length; i++) {
 
 packets.sort(compare)
 
-console.log(packets)
-
 firstDistress = -1
 secondDistress = -1
 
