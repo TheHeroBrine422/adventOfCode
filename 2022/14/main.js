@@ -33,26 +33,21 @@ for (var i = 0; i < d.length; i++) {
 }
 
 for (var i = 0; i < d.length; i++) {
-  console.log(d[i])
   for (var j = 0; j < d[i].length-1; j++) {
     if (d[i][j][0] == d[i][j+1][0]) { // x is not changing
       min = Math.min(d[i][j][1], d[i][j+1][1])
       max = Math.max(d[i][j][1], d[i][j+1][1])+1
       for (var k = min; k < max; k++) {
-        console.log(k+", "+d[i][j][0])
         grid[k][d[i][j][0]] = "#"
       }
     } else { // y is not changing
       min = Math.min(d[i][j][0], d[i][j+1][0])
       max = Math.max(d[i][j][0], d[i][j+1][0])+1
       for (var k = min; k < max; k++) {
-        console.log(d[i][j][1]+", "+k)
         grid[d[i][j][1]][k] = "#"
       }
     }
-    console.log("new segment")
   }
-  console.log("new set")
 }
 
 sandPos = [500,0]
