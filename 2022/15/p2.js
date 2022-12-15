@@ -71,7 +71,6 @@ for (var j = 0; j <= max; j++) {
   for (var i = 0; i < ranges.length; i++) { // sort ranges
     ranges[i].sort((a,b) => a-b)
   }
-  ranges.sort((a,b) => a[0]-b[0])
 
   ranges = merge(ranges)
 
