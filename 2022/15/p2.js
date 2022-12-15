@@ -76,6 +76,7 @@ for (var j = 0; j <= max; j++) {
   ranges = merge(ranges)
 
   if (ranges.length != 1) {
+    console.log("("+(ranges[0][1]+1)+", "+j+")")
     console.log((ranges[0][1]+1)*4000000+j)
     break
   }
