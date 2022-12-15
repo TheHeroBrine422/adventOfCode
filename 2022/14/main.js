@@ -71,7 +71,6 @@ while(sandPos[1] < lowestY+10) {
 display()
 console.log(t)
 
-
 function display() {
   for (var i = 0; i < lowestY+2; i++) {
     string = ""
