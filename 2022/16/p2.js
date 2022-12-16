@@ -1,3 +1,7 @@
+// this needs extra ram to run. it used around 16gb of ram at most for me, but it varies a bit based on the line 94 value. recommended to use: node --max-old-space-size=32768 p2.js
+// it also doesnt always find the best value. depending on the value in line 94 it will get slightly smaller values. if that value goes over around 15m though nodejs can crash so dont make it too high.
+// this value had to be 5m for my input, but may need to be higher for other inputs. also for some reason for some inputs it doesnt get the answer at all. on the example data it gets 1706
+// this code is also very slow. it varies on speed based on size of input and line 94 value, but it can take anywhere from 2 minutes to 15 minutes to finish. for my input it took 11 minutes.
 const fs = require('fs')
 
 d = fs.readFileSync('data.txt', 'utf8')
@@ -36,6 +40,7 @@ for (var i = 0; i < Object.keys(graph).length; i++) {
   }
 }
 
+console.time()
 paths = [{currentLocation: "AA", elephantLocation: "AA", openValves: new Set(), pressureReleased: 0}]
 newPaths = []
 minutes = 0
@@ -95,4 +100,5 @@ while (minutes < 26) {
   newPaths = []
   console.log(paths.length)
   console.log(paths[0])
+  console.timeLog()
 }
